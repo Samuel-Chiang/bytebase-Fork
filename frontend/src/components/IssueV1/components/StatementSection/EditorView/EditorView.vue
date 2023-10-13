@@ -314,17 +314,7 @@ const denyEditTaskReasons = computed(() => {
 });
 
 const shouldShowEditButton = computed(() => {
-  // Need not to show "Edit" while the issue is still pending create.
-  if (isCreating.value) {
-    return false;
-  }
-  // Will show another button group as [Upload][Cancel][Save]
-  // while editing
-  if (state.isEditing) {
-    return false;
-  }
-
-  return true;
+  return false;
 });
 
 const allowApplyTaskStateToOthers = computed(() => {
